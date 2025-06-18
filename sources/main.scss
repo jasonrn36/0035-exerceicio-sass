@@ -1,21 +1,10 @@
-
-//Seção de cores do Site em SASS
-$corPrincipal: #f5f6fa;
-$corTextoMenu:#fff;
-$corSecundaria:#44bd32;
-$corTerciaria:#2dff0c;
-$corBarraMenu:#182C61;
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Roboto, sans-serif;
-}
+// Importação de arquivos e tipos
+@use'../sources/config/cores.scss';
+@use'../sources/sessoes/produtos.scss';
+@use '../sources/config/reset.scss';
 
 body {
-    background-color: $corPrincipal;
+    background-color: cores.$corPrincipal;
 }
 
 li {
@@ -29,7 +18,7 @@ li {
 }
 
 header {
-    background-color: $corBarraMenu;
+    background-color: cores.$corBarraMenu;
     position: sticky;
     top: 0;
     left: 0;
@@ -52,41 +41,12 @@ header .container {
 }
 
 .menu li a {
-    color: $corTextoMenu;
+    color: cores.$corTextoMenu;
     text-decoration: none;
 }
 
 section {
     padding: 56px 0;
-}
-
-.products {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(3, 32.66%);
-    column-gap: 1%;
-    row-gap: 4%;
-    width: 100%;
-}
-
-.product-item img {
-    width: 100%;
-    border-radius: 16px;
-}
-
-.product-button {
-    display: block;
-    background-color:$corSecundaria;
-    color: $corTextoMenu;
-    text-align: center;
-    padding: 8px 0;
-    border-radius: 8px;
-    margin-top: 8px;
-    text-decoration: none;
-
-        &:hover {
-            background-color: $corTerciaria;
-        }
 }
 
 @media screen and (max-width: 1023px) {
